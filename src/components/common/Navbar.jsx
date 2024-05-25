@@ -14,7 +14,7 @@ function Navbar() {
             <div className={displayMode?"p-2 rounded-md sm:block bg-neutral-50 hover:bg-neutral-300":"rounded-xl hidden sm:block p-2 bg-neutral-50 hover:bg-neutral-300 "}><a href="#">Home</a></div>
             <div className={displayMode?"p-2 sm:block rounded-md bg-neutral-50 hover:bg-neutral-300":"rounded-xl hidden sm:block p-2 bg-neutral-50 hover:bg-neutral-300 "}><a href="#">Latest News</a></div>
             <div className={displayMode?"p-2 sm:block rounded-md bg-neutral-50 hover:bg-neutral-300":"rounded-xl hidden sm:block p-2 bg-neutral-50 hover:bg-neutral-300 "}><a href="#">Top 10</a></div>
-            <div className={displayMode?"p-2 sm:block rounded-md bg-neutral-50 hover:bg-neutral-300":"rounded-xl sm:block hidden p-2 bg-neutral-50 hover:bg-neutral-300 "}><a href="#">Reviews</a></div>
+            <div className={displayMode?"p-2 sm:block rounded-md bg-neutral-50 hover:bg-neutral-300":"rounded-xl sm:block hidden p-2 bg-neutral-50 hover:bg-neutral-300 "}><a href="#">Episode Reviews</a></div>
         </div>
     </React.Fragment>
   )
