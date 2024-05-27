@@ -1,50 +1,62 @@
-import React,{ createContext,useState,useEffect } from 'react'
+import React,{ createContext,useState} from 'react'
 import Container from '../common/Container'
 import About from './About'
 import Contact from '../common/Contact'
-import DetailedContainer from '../common/DetailedContainer'
+import DetailedContainer from './DetailedContainer'
 
 function MainSection() {
-  const [isVisibleCOTE,setIsVisibleCOTE] = useState(false)
-  const [isVisibleBC,setIsVisibleBC] = useState(false)
-  const [isVisibleOshi,setIsVisibleOshi] = useState(false)
-  const [isVisibleVillain,setIsVisibleVillain] = useState(false)
+  const [isVisibleGenshin,setIsVisibleGenshin] = useState(false)
+  const [isVisibleHalf,setIsVisibleHalf] = useState(false)
+  const [isVisibleArise,setIsVisibleArise] = useState(false)
+  const [isVisibleMount,setIsVisibleMount] = useState(false)
+  const [isVisibleForza,setIsVisibleForza] = useState(false)
+  const [isVisibleNeed,setIsVisibleNeed] = useState(false)
   const showCat = () => {
-    setIsVisibleCOTE(true)
+    setIsVisibleGenshin(true)
   }
   const showBC = () => {
-    setIsVisibleBC(true)
+    setIsVisibleHalf(true)
   }
   const showO = () => {
-    setIsVisibleOshi(true)
+    setIsVisibleForza(true)
   }
   const showV = () => {
-    setIsVisibleVillain(true)
+    setIsVisibleNeed(true)
+  }
+  const showA = () => {
+    setIsVisibleArise(true)
+  }
+  const showM = () => {
+    setIsVisibleMount(true)
   }
 
   return (
-  <isVisibleCOTEContext.Provider value={{isVisibleCOTE,setIsVisibleCOTE,isVisibleBC,setIsVisibleBC,isVisibleOshi,setIsVisibleOshi,isVisibleVillain,setIsVisibleVillain}}>
+  <isVisibleGenshinContext.Provider value={{isVisibleGenshin,setIsVisibleGenshin,isVisibleHalf,setIsVisibleHalf,isVisibleForza,setIsVisibleForza,isVisibleNeed,setIsVisibleNeed,setIsVisibleArise,setIsVisibleMount}}>
     <React.Fragment>
-      <div className="text-center text-bold text-3xl pt-8 hover:text-white"><h4>Popular Anime</h4></div>
+      <div className="text-center text-bold text-3xl pt-8 hover:text-white"><h4>Popular Games</h4></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 ps-20 sm:ps-32">
-          <div onClick={showBC}><Container showTitle="Black Clover" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/e7899bc8b7ea56f0133ea02c4020b85f.jpg?alt=media&token=dfa0cc06-0d1b-4baa-9320-8a509d01a585" showGenre="Action" showDescription="The year is 2006, and the halls of Tokyo Prefectural Jujutsu High School echo with the endless bickering and intense debate between two inseparable best friends." showAuthor="Ingrid Ochoa"  showLike="16.4" showAlt="Black Clover"/></div>
-          <div onClick={showCat}><Container showTitle="Classroom of the Elite S3" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/cote.jpeg?alt=media&token=d556e542-a3ae-48b5-ac03-72d9ad87d23a" showLike="20.4" showGenre="Mystery" showDescription=" The third semester kicks off in high gear with a special boot camp deep in the mountains. Can Class D make it back to campus intact, or is this where they finally say goodbye to one of their own?" showAuthor="Shōgo Kinugasa" showAlt="Classroom of the elite Ayanokouji and Karuizawa"/></div>
+          <div onClick={showBC}><Container onClick={showBC} showTitle="Genshin Impact" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fgenshin%20(1).jpg?alt=media&token=4b4e602d-1439-4017-8ae4-4d96e3bb8979" showGenre="Role Playing Game" showDescription="Genshin Impact takes place in the fantasy world of Teyvat, home to seven nations, each of which is tied to a different element and ruled by a different god (archon)." showPublisher="miHoYo"  showPlatform="PS4 PS5 Android" showAlt="Genshin Impact"/></div>
+          <div onClick={showCat}><Container showTitle="Half Life Alyx" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fhla.jpg?alt=media&token=99e210e0-068f-41ac-b26c-f37d16a64b91" showPlatform="Windows Linux" showGenre="First Person Shooter" showDescription="Players control the Resistance member Alyx Vance as she and her father Eli Vance fight the Combine, an alien empire that has conquered Earth." showPublisher="Valve" showAlt="Half Life Alyx"/></div>
+          <div onClick={showA}><Container showTitle="Tales of Arise" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fta.jpeg?alt=media&token=c80e41f7-18ae-48b7-980e-72457b89b1ff" showPlatform="PS5 PS4 Windows Xbox" showGenre="Action Role Playing" showDescription="Arise takes place in a setting divided between the medieval world. Lenegis invaded and conquered Dahna, subsequently enslaving the population and dividing the land into five isolated realms." showPublisher="Bandai Namco Entertainment" showAlt="Tales of Arise"/></div>
+          <div onClick={showM}><Container showTitle="Mount & Blade II: Bannerlord" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fmb.jpeg?alt=media&token=0e172b99-7e36-4a0c-8671-7ff3be06bad5" showPlatform="Windows Linux" showGenre="Strategy Action" showDescription="Bannerlord takes place 210 years before its predecessor, with a setting inspired by the Migration Period. Bannerlord was announced in 2012." showAlt="Mount & Blade: Bannerlord" showPublisher="TaleWorlds Entertainment"/></div>
       </div>
-      <div className={isVisibleCOTE?"block":"hidden"}><DetailedContainer DTitle="Classroom of the Elite" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/DC%2Fcote1.jpeg?alt=media&token=4867f951-62d4-47a6-909e-0274f504771f" DYear="2017" DRating="6.7" DSummary="The third season of Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e. The third semester kicks off in high gear with a special boot camp deep in the mountains. Forcibly separated into groups along grade and gender lines, the first, second and third years alike must work together to survive the rugged terrain. Even worse? The leader of the group that comes in last will be expelled. Can Class D make it back to campus intact, or is this where they finally say goodbye to one of their own?" DNetflix="https://www.netflix.com/in/title/80193178" DStudio="Lerche" DGenre="Mystery, School, Thriller" DDuration="24Min"/></div>
-      <div className={isVisibleBC?"block":"hidden"}><DetailedContainer DTitle="Black Clover" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/DC%2Fbcc.jpg?alt=media&token=1683345c-20d8-4660-b6af-70aae73e8539" DYear="2019" DRating="8.4" DSummary="Asta and Yuno were abandoned at the same church on the same day. Raised together as children, they came to know of the 'Wizard King' a title given to the strongest mage in the kingdom—and promised that they would compete against each other for the position of the next Wizard King.Though without hope and on the brink of defeat, he finds the strength to continue when he hears Yuno's voice. Unleashing his inner emotions in a rage, Asta receives a five-leaf clover Grimoire, a 'Black Clover' giving him enough power to defeat Lebuty. A few days later, the two friends head out into the world, both seeking the same goal—to become the Wizard King!" DNetflix="https://www.netflix.com/in/title/80238012" DStudio="Studio Pierrot" DGenre="Action Comedy Thriller" DDuration="23Min"/></div>
-      <div className="text-center text-bold text-3xl pt-8 hover:text-white"><h4>New Anime</h4></div>
+      <div className={isVisibleHalf?"block":"hidden"}><DetailedContainer DTitle="Genshin Impact" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fgi2.jpg?alt=media&token=a3a0f548-c4ec-4fbf-8dcf-d9b6ec5d9e57" DYear="2020" DAlt="Genshin Impact Environment" DRating="8.6" DSummary="Genshin Impact is an open-world, action role-playing game that allows the player to control one of four interchangeable characters in a party. Switching between characters can be done quickly during combat, allowing the player to use several different combinations of skills and attacks. Characters may have their abilities enhanced in various ways, mainly through directly leveling them up and improving the artifacts and weapons that a character can equip." DOfficial="https://ys.mihoyo.com/main" DGenre="Role Playing Game" /></div>
+      <div className={isVisibleGenshin?"block":"hidden"}><DetailedContainer DTitle="Half Life Alyx" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fhla2.jpg?alt=media&token=6ca9cb41-c3b4-46b5-bf5e-9bdd796aec93" DYear="2020" DRating="8.4" DAlt="Half Life Alyx Environment" DSummary="The previous Half-Life game, Episode Two, was released in 2007 and ended on a cliffhanger.The game includes traditional Half-Life elements such as exploration, puzzles, combat, and story. While it is primarily a first-person shooter, it adds elements of the survival horror genre, as health and ammo are more scarce, and includes frightening encounters." DOfficial="https://www.half-life.com/en/alyx" DSteam="https://store.steampowered.com/app/546560/HalfLife_Alyx/" DGenre="First Person Shooter" /></div>
+      <div className={isVisibleArise?"block":"hidden"}><DetailedContainer DTitle="Tales of Arise" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fta2.jpg?alt=media&token=6c87547c-66a9-45f9-95a0-5d4af4fc076f" DYear="2021" DRating="7.5" DAlt="Main Characters of Tales of Arise" DSummary="The Dahnan resistance against the Renan occupation is currently divided into four independent movements spread across the planet. The only realm who lacks a resistance cell is Ganath Haros whose Lord subjugated the entire population, regardless of race." DSteam="https://store.steampowered.com/app/740130/Tales_of_Arise/" DGenre="Action Role Playing" DOfficial="https://en.bandainamcoent.eu/tales-of/tales-of-arise"/></div>
+      <div className={isVisibleMount?"block":"hidden"}><DetailedContainer DTitle="Mount & Blade II: Bannerlord" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fmb2.jpg?alt=media&token=05897538-34e4-4704-92ee-fff16a87ccf4" DYear="2022" DRating="9.2" DAlt="MBII" DSummary="Mount & Blade II: Bannerlord is set on the fictional continent of Calradia, 173 years before Mount & Blade: Warband, during the decline of the Calradic Empire and the formation of the predecessors of the factions that appear in Warband." DSteam="https://store.steampowered.com/app/261550/Mount__Blade_II_Bannerlord/" DGenre="Strategy Action" DOfficial="https://www.taleworlds.com/en/Games/Bannerlord"/></div>
+      <div className="text-center text-bold text-3xl pt-8 hover:text-white"><h4>New Games</h4></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 ps-20 sm:ps-32 ">
-          <div onClick={showO}><Container showTitle="Oshi No Ko" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/2023-04-20-1094685.jpeg?alt=media&token=5a4c81c7-3993-4bad-affa-d951a2ed57f5" showLike="25.7" showGenre="Thriller" showDescription="In the entertainment world, celebrities often show exaggerated versions of themselves to the public, concealing their true thoughts and struggles beneath elaborate lies." showAuthor="Essie / Hyeyong" showAlt="Oshi No Ko Ai"/></div>
-          <div onClick={showV}><Container showTitle="My Villainous Family Won't Let Me Be" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/sadasd%20(1).png?alt=media&token=989f7d3c-0587-4b88-967e-a1837d1e8865" showLike="20.4" showGenre="Fantasy" showDescription="A distant echo from a life long-forgotten; shattered shards of an ominous future. When her late mot..." showAuthor="hatti / mitchu" showAlt="Villanous Isekai"/></div>
+          <div onClick={showO}><Container showTitle="Forza Motorsport" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fforza.jpg?alt=media&token=4ab19bf3-ef36-48a5-aa73-8ec7a46377e7" showPlatform="Windows Xbox" showGenre="Racing" DAlt="Yellow Car" showDescription="Forza Motorsport features more than 500 vehicles and 800 upgrades, as well as 20 newly built tracks." showPublisher="	Xbox Game Studios" showAlt="Forza Motorsport"/></div>
+          <div onClick={showV}><Container showTitle="Need for Speed Unbound" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fnfsu.jpg?alt=media&token=f43c78ef-86e9-44c0-a364-14d2616e2d24" showPlatform="PS5 Windows Xbox" showGenre="Racing" showDescription="The game features an art style that merges artistic elements like cel-shading and graffiti art with the more realistic art style of other Need for Speed games." showPublisher="Electronic Arts" showAlt="Red Car Yellow Graffiti"/></div>
       </div>
-      <div className={isVisibleOshi?"block":"hidden"}><DetailedContainer DTitle="Oshi No Ko" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/DC%2Foshi%20no%20ko.jpeg?alt=media&token=056c555c-21f8-48c5-866c-c12cf10fa597" DYear="2020" DRating="9.3" DSummary="In the entertainment world, celebrities often show exaggerated versions of themselves to the public, concealing their true thoughts and struggles beneath elaborate lies. Fans buy into these fabrications, showering their idols with undying love and support, until something breaks the illusion. While the doctor promises Ai to safely deliver her children, he wonders if this encounter with the idol will forever change the nature of his relationship with her." DNetflix="https://www.netflix.com/jp-en/title/81684733" DStudio="Doga Koba" DGenre="Drama Music Seinen" DDuration="24Min"/></div>
-      <div className={isVisibleVillain?"block":"hidden"}><DetailedContainer DTitle="My Villainous Family Won't Let Me Be" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/DC%2Fvillain.png?alt=media&token=95504b91-0e94-45e8-ae09-d8e6ff225d7d" DYear="2019" DRating="6.5" DSummary="Most people would prefer being the protagonist of a world full of adventure, be it in a game or in another world. But, unfortunately, a certain girl is not so lucky. Regaining the memories of her past life, she realizes that she was reborn in the world of Fortune Lover—one of the games she used to play.Even so, to make a change that will affect the lives of everyone around her, she strives—not as the heroine—but as the villainess. [Written by MAL Rewrite]" DNetflix="https://www.netflix.com/in/title/80238012" DStudio="Silver Link" DGenre="Isekai Romance Comedy" DDuration="24Min"/></div>
+      <div className={isVisibleForza?"block":"hidden"}><DetailedContainer DTitle="Forza Motorsport" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Ffm3.jpg?alt=media&token=81309324-c6b0-493f-b623-5d63b06052f5" DYear="2020" DAlt="Cars" DRating="6.3" DSummary="Out-build the competition in the all-new career. Race your friends in adjudicated multiplayer events. Compete in over 500 cars on world-famous tracks with cutting edge AI, advanced physics, and tire and fuel strategy." DSteam="https://store.steampowered.com/app/2440510/Forza_Motorsport/" DGenre="Racing" DOfficial="https://forza.net/motorsport"/></div>
+      <div className={isVisibleNeed?"block":"hidden"}><DetailedContainer DTitle="Need For Speed Unbound" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fnfs2.jpg?alt=media&token=81497fb2-8442-4926-8a9f-47f3db5bcf7f" DYear="2019" DAlt="Yellow Car facing Police Cars" DRating="6.5" DSummary="Race to the top, definitely don’t flop. Outsmart the cops, and enter weekly qualifiers for The Grand: the ultimate street race. Pack your garage with precision-tuned, custom rides, and light up the streets with your style." DSteam="https://store.steampowered.com/app/1846380/Need_for_Speed_Unbound/" DGenre="Racing" DOfficial="https://www.ea.com/games/need-for-speed/need-for-speed-unbound"/></div>
       <About/>
       <Contact/>
     </React.Fragment>
-  </isVisibleCOTEContext.Provider>
+  </isVisibleGenshinContext.Provider>
   )
 }
 
 export default MainSection
-export const isVisibleCOTEContext = createContext();
+export const isVisibleGenshinContext = createContext();
