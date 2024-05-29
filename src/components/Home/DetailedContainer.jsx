@@ -1,7 +1,7 @@
 import React,{ useContext,useState } from 'react'
 import { isVisibleGenshinContext } from './MainSection';
 
-function DetailedContainer({DTitle,DImage,DYear,DRating,DGenre,DSummary,DAlt,DSteam,DOfficial}) {
+function DetailedContainer({DTitle,DImage,DYear,DRating,DGenre,DSummary,DAlt,DSteam,DOfficial,DX,DPS4,DPS5}) {
     const {setIsVisibleGenshin,setIsVisibleHalf,setIsVisibleForza,setIsVisibleNeed,setIsVisibleArise,setIsVisibleMount} = useContext(isVisibleGenshinContext);
     const returnMenu = () => {
         setIsVisibleGenshin(false)

@@ -1,8 +1,8 @@
 import React,{ createContext,useState} from 'react'
-import Container from '../common/Container'
 import About from './About'
 import Contact from '../common/Contact'
 import DetailedContainer from './DetailedContainer'
+import Container from './Container'
 
 function MainSection() {
   const [isVisibleGenshin,setIsVisibleGenshin] = useState(false)
