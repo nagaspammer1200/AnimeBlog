@@ -1,6 +1,5 @@
 import React,{ createContext,useState} from 'react'
 import About from './About'
-import Contact from '../common/Contact'
 import DetailedContainer from './DetailedContainer'
 import Container from './Container'
 
@@ -35,7 +34,7 @@ function MainSection() {
     <React.Fragment>
       <div className="text-center text-bold text-3xl pt-8 hover:text-white"><h4>Popular Games</h4></div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 ps-10 sm:ps-32">
-          <div onClick={showBC}><Container onClick={showBC} showTitle="Genshin Impact" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fgenshin%20(1).jpg?alt=media&token=4b4e602d-1439-4017-8ae4-4d96e3bb8979" showGenre="Role Playing Game" showDescription="Genshin Impact takes place in the fantasy world of Teyvat, home to seven nations, each of which is tied to a different element and ruled by a different god (archon)." showPublisher="miHoYo"  showPlatform="PS4 PS5 Android" showAlt="Genshin Impact"/></div>
+          <div onClick={showBC}><Container showTitle="Genshin Impact" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fgenshin%20(1).jpg?alt=media&token=4b4e602d-1439-4017-8ae4-4d96e3bb8979" showGenre="Role Playing Game" showDescription="Genshin Impact takes place in the fantasy world of Teyvat, home to seven nations, each of which is tied to a different element and ruled by a different god (archon)." showPublisher="miHoYo"  showPlatform="PS4 PS5 Android" showAlt="Genshin Impact"/></div>
           <div onClick={showCat}><Container showTitle="Half Life Alyx" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fhla.jpg?alt=media&token=99e210e0-068f-41ac-b26c-f37d16a64b91" showPlatform="Windows Linux" showGenre="First Person Shooter" showDescription="Players control the Resistance member Alyx Vance as she and her father Eli Vance fight the Combine, an alien empire that has conquered Earth." showPublisher="Valve" showAlt="Half Life Alyx"/></div>
           <div onClick={showA}><Container showTitle="Tales of Arise" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fta.jpeg?alt=media&token=c80e41f7-18ae-48b7-980e-72457b89b1ff" showPlatform="PS5 PS4 Windows Xbox" showGenre="Action Role Playing" showDescription="Arise takes place in a setting divided between the medieval world. Lenegis invaded and conquered Dahna, subsequently enslaving the population and dividing the land into five isolated realms." showPublisher="Bandai Namco Entertainment" showAlt="Tales of Arise"/></div>
           <div onClick={showM}><Container showTitle="Mount & Blade II: Bannerlord" showImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fmb.jpeg?alt=media&token=0e172b99-7e36-4a0c-8671-7ff3be06bad5" showPlatform="Windows Linux" showGenre="Strategy Action" showDescription="Bannerlord takes place 210 years before its predecessor, with a setting inspired by the Migration Period. Bannerlord was announced in 2012." showAlt="Mount & Blade: Bannerlord" showPublisher="TaleWorlds Entertainment"/></div>
@@ -52,7 +51,6 @@ function MainSection() {
       <div className={isVisibleForza?"block":"hidden"}><DetailedContainer DTitle="Forza Motorsport" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Ffm3.jpg?alt=media&token=81309324-c6b0-493f-b623-5d63b06052f5" DYear="2020" DAlt="Cars" DRating="6.3" DSummary="Out-build the competition in the all-new career. Race your friends in adjudicated multiplayer events. Compete in over 500 cars on world-famous tracks with cutting edge AI, advanced physics, and tire and fuel strategy." DSteam="https://store.steampowered.com/app/2440510/Forza_Motorsport/" DGenre="Racing" DOfficial="https://forza.net/motorsport"/></div>
       <div className={isVisibleNeed?"block":"hidden"}><DetailedContainer DTitle="Need For Speed Unbound" DImage="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fnfs2.jpg?alt=media&token=81497fb2-8442-4926-8a9f-47f3db5bcf7f" DYear="2019" DAlt="Yellow Car facing Police Cars" DRating="6.5" DSummary="Race to the top, definitely don’t flop. Outsmart the cops, and enter weekly qualifiers for The Grand: the ultimate street race. Pack your garage with precision-tuned, custom rides, and light up the streets with your style." DSteam="https://store.steampowered.com/app/1846380/Need_for_Speed_Unbound/" DGenre="Racing" DOfficial="https://www.ea.com/games/need-for-speed/need-for-speed-unbound"/></div>
       <About/>
-      <Contact/>
     </React.Fragment>
   </isVisibleGenshinContext.Provider>
   )
