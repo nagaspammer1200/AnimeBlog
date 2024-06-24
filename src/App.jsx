@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Latest from './pages/Latest';
 import Top from './pages/Top';
 import Article from './pages/Article';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
 
@@ -16,6 +18,8 @@ function App() {
             <Route path="/latest" element={<Latest/>}/>
             <Route path="/top" element={<Top/>}/>
             <Route path="/article" element={<Article/>}/>
+            <Route path="/privacypolicy" element={<Privacy/>}/>
+            <Route path="/termsandconditons" element={<Terms/>}/>
           </Routes> 
       </BrowserRouter>
     </React.Fragment>
