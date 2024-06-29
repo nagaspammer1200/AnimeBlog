@@ -4,34 +4,21 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 function About() {
   return (
     <React.Fragment>
-        <div className="text-center text-bold text-3xl p-8"><h1>Here's what we Offer</h1></div>
-        <React.Fragment>
-            <React.Fragment>
-                <div className="p-16 space-y-8 pl-20 bg-gradient-to-r from-gray-700 via-gray-900 to-black">
-                    <div className="block sm:mb-48 sm:flex space-y-16 mb-32 sm:space-x-60 sm:mb-16">
-                        <div className="mb-32 sm:mb-0 sm:mt-16"><LazyLoadImage src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fvideo-games.gif?alt=media&token=ca54ce27-5621-429f-b439-847e0e1af2fe" alt="Playing Games" /></div>
-                        <div>
-                            <div className="text-center text-bold text-xl mb-6 text-white"><h3>Latest News</h3></div>
-                            <div className="max-w-48 text-fuchsia-600"><p>Video Games news site with daily updates, covering new releases, game adaptations, and industry interviews, delivering the latest in gaming culture.</p></div>
-                        </div>
-                    </div>
-                    <div className="flex flex-col-reverse sm:flex sm:flex-row space-y-16 mb-32 sm:space-x-60 sm:mb-16">
-                        <div>
-                            <div className="text-center text-bold text-xl mb-6 text-white"><h3>Weekly Articles</h3></div>
-                            <div className="max-w-48 text-fuchsia-600"><p>Stay updated with our weekly gaming news round-up, covering the latest shows, industry updates, and community events. We are the most popular news site when it comes to Games!</p></div>
-                        </div>
-                        <div className="sm:max-w-48 sm:pb-16"><LazyLoadImage src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fseulgi-kang-seulgi.gif?alt=media&token=be706452-1001-4d48-9553-cbe9baf10d33" alt="Two Girls Using a Tablet" /></div>
-                    </div>
-                    <div className="block sm:flex space-y-16 sm:space-x-60 mb-32 sm:mb-16">
-                        <div className="pt-28"><LazyLoadImage src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/Home%2Fnfs-nfsmw.gif?alt=media&token=7c43d2e2-ae33-438b-aa5b-5027a51ec825" alt="Car chased by police" height="400px" width="300px" /></div>
-                        <div>
-                            <div className="text-center text-bold text-xl mb-6 text-white"><h3>Gameplay Guides</h3></div>
-                            <div className="max-w-48 text-fuchsia-600"><p>Expert gameplay guides offering tips, strategies, and walkthroughs for beginners to advanced players, maximizing your gaming experience and skills.</p></div>
-                        </div>
-                    </div>
-                </div>
-            </React.Fragment>
-        </React.Fragment>
+        <div className="text-start p-8 hover:bg-gradient-to-r  text-white from-purple-700 to-sky-800">
+            <p className="sm:pl-48 sm:pr-48 mb-3">Get the latest scoop on the gaming world! Stay up-to-date with weekly articles, top 10 lists, and breaking news on new releases, updates, and trends in the video game industry. Your one-stop hub for all things gaming!. Here's what's awaiting you!!</p>
+            <ul className="list-none text-start sm:ml-64 text-sm">
+                <li className="mb-2"><i className="bi bi-circle-fill"></i>  Latest Games</li>
+                <li className="mb-2"><i className="bi bi-circle-fill"></i>  Articles dedicated to Gaming</li>
+                <li className="mb-2"><i className="bi bi-circle-fill"></i>  Editor's Choice for Top 10 Games</li>
+                <li className="mb-2"><i className="bi bi-circle-fill"></i>  Esports Coverage </li>
+            </ul>
+            <p className="sm:pl-48 sm:pr-48 mb-3">Stay connected with us for exclusive updates, behind-the-scenes insights, and community engagement! Follow us on social media and join the conversation using following links!!</p>
+            <div className="sm:ml-56 flex-row flex gap-8">
+              <div><a href=""><img src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/icons%2Fdiscord.png?alt=media&token=7aeda5e9-7f39-46b5-848c-78f86182acfa" alt="Discord Logo" /></a></div>
+              <div><a href="https://github.com/nagaspammer1200"><img src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/icons%2Fgithub.png?alt=media&token=e6f14a54-a0cf-48a1-bb2a-eb396f83e128" alt="Github Logo" /></a></div>
+              <div><a href="https://www.linkedin.com/in/sreekanth-p-s-867515290/"><img src="https://firebasestorage.googleapis.com/v0/b/animeblog-56aed.appspot.com/o/icons%2Flinkedin.png?alt=media&token=bde2dd29-32e4-490a-ac3f-d651823123dd" alt="LinkedIn Logo" /></a></div>
+            </div>
+        </div>
     </React.Fragment>
   )
 }

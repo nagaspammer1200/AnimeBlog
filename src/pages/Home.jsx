@@ -8,7 +8,7 @@ function Home() {
   return (
     <React.Fragment>
         <Navbar/>
-        <div className="bg-gradient-to-r from-cyan-600 to-green-400"><MainSection/></div>
+        <div className="bg-gradient-to-r from-sky-400 to-green-500"><MainSection/></div>
         <Contact/>
     </React.Fragment>
   )
