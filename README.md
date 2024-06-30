@@ -37,4 +37,4 @@ The Snapshots of the Project work are displayed below this paragraph showcasing 
 
 
 
-If you like my Work, make sure to follow and react out to me on my Social Media Platforms!
+If you like my Work, make sure to follow and reach out to me on my Social Media Platforms!
