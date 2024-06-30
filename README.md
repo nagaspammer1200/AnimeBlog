@@ -7,7 +7,7 @@ The Technologies used in the Project are:
         Tailwind CSS
         Github
 
-In crafting the visual identity of our video game news network site, we leveraged the extensive libraries of icons from Icons8 and Bootstrap, carefully selecting and integrating these design elements to create a cohesive and engaging user experience. Links to their Website is given below:
+In crafting the visual identity of our video game news network site, we leveraged the extensive libraries of icons from Icons8 and Bootstrap, carefully selecting and integrating these design elements to create a cohesive and engaging user experience. Links to their Websites are given below:
 
         Icons 8: https://icons8.com/
         Bootstrap Icons: https://icons.getbootstrap.com/
