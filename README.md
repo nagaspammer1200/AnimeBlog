@@ -21,6 +21,7 @@ Connect with me on Social Media Websites:
         Github: github.com/nagaspammer1200
         Discrd: discordapp.com/users/newuserdontflame_27297_69611
 
+The Live Deployment can be reached at https://animeblog-56aed.web.app/
 
 The Snapshots of the Project work are displayed below this paragraph showcasing both Mobile View and Desktop View. This ensures the authenticity of the project work at a glance and lack of negligence for Responsive Design
 
