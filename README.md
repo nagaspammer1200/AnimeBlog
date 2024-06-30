@@ -18,7 +18,9 @@ In crafting the visual identity of our video game news network site, we leverage
 Connect with me on Social Media Websites: 
 
 LinkedIn: linkedin.com/in/sreekanth-p-s-867515290/
+
 Github: github.com/nagaspammer1200
+
 Discrd: discordapp.com/users/newuserdontflame_27297_69611
 
 The Live Deployment can be reached at https://animeblog-56aed.web.app/
