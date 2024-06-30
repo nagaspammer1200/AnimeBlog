@@ -25,4 +25,12 @@ The Live Deployment can be reached at https://animeblog-56aed.web.app/
 
 The Snapshots of the Project work are displayed below this paragraph showcasing both Mobile View and Desktop View. This ensures the authenticity of the project work at a glance and lack of negligence for Responsive Design
 
+![Screenshot (1556)](https://github.com/nagaspammer1200/AnimeBlog/assets/142073795/cb0c2b20-9f5a-4901-9681-d3d17fc2d3d2)
+![Screenshot (1560)](https://github.com/nagaspammer1200/AnimeBlog/assets/142073795/313d47ca-33ed-495f-ae61-8021af6819ec)
+![Screenshot (1559)](https://github.com/nagaspammer1200/AnimeBlog/assets/142073795/b0ac030a-4b24-4172-adbb-c88597ec9c83)
+![Screenshot (1558)](https://github.com/nagaspammer1200/AnimeBlog/assets/142073795/4dbbae02-1110-46cc-8557-689f793b1619)
+![Screenshot (1557)](https://github.com/nagaspammer1200/AnimeBlog/assets/142073795/68df873b-6bc3-472b-b405-2312afd1c6bc)
+
+
+
 If you like my Work, make sure to follow and react out to me on my Social Media Platforms!
